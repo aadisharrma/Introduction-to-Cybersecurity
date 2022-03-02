@@ -3,6 +3,8 @@ import random
 import argparse
 import sys
 
+
+
 parser = argparse.ArgumentParser()
 parser.add_argument('-w', '--words', type=int, default=4,
 help='include WORDS words in the password (default=4)')
@@ -14,11 +16,13 @@ parser.add_argument('-s', '--symbols', type=int, default=0,
 help='insert SYMBOLS random symbols in the password (default=0)')
 args = parser.parse_args()
 
+
+
 words = open('words.txt').read().splitlines()
 numbers = (["0","1","2","3","4","5","6","7","8","9"])
 symbols = (["~","!","@","#","$","%","^","&","*",".",":",";"])
-
 passwelements = []
+
 
 for i in range(args.words):
     if (args.caps > 0):
@@ -27,12 +31,14 @@ for i in range(args.words):
     else:
         passwelements.append(random.choice(words))
 
+        
 for i in range(args.symbols):
     passwelements.append(random.choice(symbols))
-        
+
+    
 for i in range(args.numbers):
     passwelements.append(random.choice(numbers))
 
+    
 random.shuffle(passwelements)
-
 print("".join(passwelements))
