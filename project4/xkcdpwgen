@@ -18,21 +18,21 @@ words = open('words.txt').read().splitlines()
 numbers = (["0","1","2","3","4","5","6","7","8","9"])
 symbols = (["~","!","@","#","$","%","^","&","*",".",":",";"])
 
-pwelements = []
+passwelements = []
 
 for i in range(args.words):
     if (args.caps > 0):
-        pwelements.append(random.choice(words).capitalize())
+        passwelements.append(random.choice(words).capitalize())
         args.caps -= 1
     else:
-        pwelements.append(random.choice(words))
+        passwelements.append(random.choice(words))
 
 for i in range(args.symbols):
-    pwelements.append(random.choice(symbols))
+    passwelements.append(random.choice(symbols))
         
 for i in range(args.numbers):
-    pwelements.append(random.choice(numbers))
+    passwelements.append(random.choice(numbers))
 
-random.shuffle(pwelements)
+random.shuffle(passwelements)
 
-print("".join(pwelements))
+print("".join(passwelements))
