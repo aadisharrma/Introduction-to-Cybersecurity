@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-
-import argparse
 import random
+import argparse
 import sys
 
 parser = argparse.ArgumentParser()
@@ -28,11 +27,11 @@ for i in range(args.words):
     else:
         pwelements.append(random.choice(words))
 
-for i in range(args.numbers):
-    pwelements.append(random.choice(numbers))
-
 for i in range(args.symbols):
     pwelements.append(random.choice(symbols))
+        
+for i in range(args.numbers):
+    pwelements.append(random.choice(numbers))
 
 random.shuffle(pwelements)
 
