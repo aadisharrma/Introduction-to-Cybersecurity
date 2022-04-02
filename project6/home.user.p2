@@ -1,0 +1,19 @@
+# Last Modified: Tue Mar 29 19:51:06 2022
+#include <tunables/global>
+
+/home/aadisharrma/Downloads/p2 {
+ #include <abstractions/base>
+ #include <abstractions/user-tmp>
+ #include <abstractions/nameservice>
+
+/home/aadisharrma/Downloads/p2 mr,
+/home/aadisharrma/.project2/config rw,
+/var/log/syslog rw,
+/etc/timezone rw,
+/proc/uptime rw,
+/etc/hostid rw,
+/home/aadisharrma/Downloads/template rw,
+
+
+}
+
